@@ -136,7 +136,7 @@ body {
   justify-content: center;
 }
 .hero-logo img {
-  height: clamp(80px, 15vw, 140px);
+  height: clamp(60px, 12vw, 120px);
   width: auto;
   filter: brightness(0) saturate(100%) invert(15%) sepia(99%) saturate(1065%) hue-rotate(357deg) brightness(98%) contrast(88%);
 }
