@@ -9,13 +9,13 @@
 
 :root {
   --pink: #ffa6e4;
-  --pink-2: #ffa6e4;
-  --lavender: #cccaef;
+  --pink-2: #fd72ca;
+  --lavender: #d0b1fc;
   --moss: #92a520;
-  --moss-2: #92a520;
+  --moss-2: #b1cc19;
   --brown: #663012;
-  --brown-ink: #663012;
-  --cream: #ffffff;
+  --brown-ink: #4d230d;
+  --cream: #f3f2e9;
   --white: #ffffff;
   --text: var(--brown-ink);
   --alt-section-bg: #ffa6e4; /* Fix: statische, deckende Farbe statt mix */
@@ -23,7 +23,10 @@
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body { 
+  height: 100%; 
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   color: var(--text);
@@ -38,8 +41,9 @@ body {
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: min(1100px, 95%);
   margin: 0 auto;
+  padding: 0 2.5%;
 }
 
 /* Header */
