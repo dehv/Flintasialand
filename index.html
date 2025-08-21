@@ -79,13 +79,13 @@
         <div class="container">
           <h2>Line-up</h2>
           <div class="artist-grid">
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('yumi-k')">
               <img class="artist-img" src="media/artists/compressed/yumik.jpg" alt="Yumi K" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Yumi K</div>
             </div>
 
-            <div class="artist-card duo">
+            <div class="artist-card duo" onclick="openModal('katanna-isi')">
               <div class="artist-img-split">
                 <img src="media/artists/compressed/Katanna_svenschwede.jpg" alt="Katanna" loading="lazy" />
                 <img src="media/artists/compressed/Isi2_Svenschwede.jpg" alt="Isi" loading="lazy" class="img-focus-bottom" />
@@ -94,25 +94,25 @@
               <div class="artist-name">Katanna + Isi (Patina Records)</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('catpisspotion')">
               <img class="artist-img" src="media/artists/compressed/Cat Piss Potion 2024 - photo by luisagalotti.jpg" alt="catpisspotion" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">catpisspotion</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('morra')">
               <img class="artist-img" src="media/artists/compressed/morra.jpg" alt="Morra" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Morra</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('leo3000')">
               <img class="artist-img img-focus-bottom" src="media/artists/compressed/leo3000.jpg" alt="Leo3000" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Leo3000</div>
             </div>
 
-            <div class="artist-card duo">
+            <div class="artist-card duo" onclick="openModal('frontspin-djuglyyy')">
               <div class="artist-img-split">
                 <img src="media/artists/compressed/frontspin.jpg" alt="frontspin" loading="lazy" />
                 <img src="media/artists/compressed/djuglyyy.jpg" alt="dj uglyyy" loading="lazy" class="img-focus-top" />
@@ -121,19 +121,19 @@
               <div class="artist-name">frontspin b2b dj uglyyy</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('schrotflinta')">
               <img class="artist-img" src="media/artists/compressed/schrotflintaPressefoto.jpg" alt="Schrotflinta" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Schrotflinta</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('shaxtar')">
               <img class="artist-img img-focus-top" src="media/artists/compressed/shaxtarPressefoto (1).jpg" alt="Shaxtar" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Shaxtar</div>
             </div>
 
-            <div class="artist-card">
+            <div class="artist-card" onclick="openModal('serving-cunts')">
               <img class="artist-img" src="media/artists/compressed/serving cunts.jpg" alt="Serving Cunts" loading="lazy" />
               <div class="artist-overlay"></div>
               <div class="artist-name">Serving Cunts</div>
@@ -157,9 +157,13 @@
 
           <h3>Kleine Bühne @ Kieselwiese</h3>
           <div class="schedule">
-            <div class="slot"><div class="slot-head"><p class="slot-time">14:00–16:00</p><span class="badge badge-open">OPEN 4 ALL</span></div><p class="slot-title">Schminkworkshop mit Climannax</p></div>
-            <div class="slot"><div class="slot-head"><p class="slot-time">16:00–17:00</p><span class="badge badge-flinta">FLINTA* only</span></div><p class="slot-title">Dadaistischer Musikworkshop + Performance (DDDR)</p></div>
-            <div class="slot"><p class="slot-time">16:30–17:30</p><p class="slot-title">DJ Workshop</p></div>
+            <div class="slot clickable" onclick="openModal('schminkworkshop')"><div class="slot-head"><p class="slot-time">14:00–16:00</p><span class="badge badge-open">OPEN 4 ALL</span></div><p class="slot-title">Schminkworkshop mit Climannax</p></div>
+            <div class="slot clickable" onclick="openModal('queer-fotostand')">
+              <div class="slot-head"><p class="slot-time">ALL DAY</p><span class="badge badge-queer">QUEER only</span></div>
+              <p class="slot-title">QueerIn44 Fotostand + Netzwerktreffen</p>
+            </div>
+            <div class="slot clickable" onclick="openModal('dddr-workshop')"><div class="slot-head"><p class="slot-time">16:00–17:00</p><span class="badge badge-flinta">FLINTA* only</span></div><p class="slot-title">Dadaistischer Musikworkshop + Performance (DDDR)</p></div>
+            <div class="slot clickable" onclick="openModal('dj-workshop')"><p class="slot-time">16:30–17:30</p><p class="slot-title">DJ Workshop</p></div>
             <div class="slot"><p class="slot-time">18:00–19:00</p><p class="slot-title">Schrotflinta</p></div>
             <div class="slot"><p class="slot-time">19:00–20:00</p><p class="slot-title">Shaxtar</p></div>
             <div class="slot"><p class="slot-time">20:00–22:00</p><p class="slot-title">Serving Cunts</p></div>
@@ -167,23 +171,19 @@
 
           <h3>Workshops & Chillout @ Maschinerie</h3>
           <div class="schedule">
-            <div class="slot">
-              <div class="slot-head"><p class="slot-time">ALL DAY</p><span class="badge badge-queer">QUEER only</span></div>
-              <p class="slot-title">QueerIn44 Fotostand + Netzwerktreffen</p>
-            </div>
-            <div class="slot">
+            <div class="slot clickable" onclick="openModal('rap-lyrik-workshop')">
               <div class="slot-head"><p class="slot-time">14:00–15:30</p><span class="badge badge-flinta">FLINTA* only</span></div>
               <p class="slot-title">Rap + Lyrik Workshop für Kinder + Jugendliche</p>
             </div>
-            <div class="slot">
+            <div class="slot clickable" onclick="openModal('screamen-workshop')">
               <div class="slot-head"><p class="slot-time">16:00–17:00</p><span class="badge badge-flinta">FLINTA* only</span></div>
               <p class="slot-title">Shout out loud – Einführung in das Screamen</p>
             </div>
-            <div class="slot">
+            <div class="slot clickable" onclick="openModal('zine-workshop')">
               <div class="slot-head"><p class="slot-time">17:30–18:30</p><span class="badge badge-flinta">FLINTA* only</span></div>
               <p class="slot-title">angry grrrl zine workshops</p>
             </div>
-            <div class="slot">
+            <div class="slot clickable" onclick="openModal('fotoarchiv-workshop')">
               <div class="slot-head"><p class="slot-time">17:30–18:30</p><span class="badge badge-flinta">FLINTA* only</span></div>
               <p class="slot-title">Feministisches Fotoarchiv & Fotobordado – Workshop</p>
             </div>
@@ -252,12 +252,155 @@
       </div>
     </footer>
 
+    <!-- Modals für Acts & Workshops -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
     <script>
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.site-nav');
       toggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('open');
         toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Modal functionality
+      function openModal(id) {
+        const modal = document.getElementById('modal-overlay');
+        const modalBody = document.getElementById('modal-body');
+        
+        // Placeholder content - replace with real descriptions later
+        const content = getModalContent(id);
+        modalBody.innerHTML = content;
+        
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('modal-overlay');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      function getModalContent(id) {
+        const content = {
+          'yumi-k': `
+            <h2>Yumi K</h2>
+            <p><strong>Zeit:</strong> 14:00–15:00</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'katanna-isi': `
+            <h2>Katanna + Isi (Patina Records)</h2>
+            <p><strong>Zeit:</strong> 15:30–16:30</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'catpisspotion': `
+            <h2>catpisspotion</h2>
+            <p><strong>Zeit:</strong> 17:00–18:00</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'morra': `
+            <h2>Morra</h2>
+            <p><strong>Zeit:</strong> 18:30–19:30</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'leo3000': `
+            <h2>Leo3000</h2>
+            <p><strong>Zeit:</strong> 20:00–22:00</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'frontspin-djuglyyy': `
+            <h2>frontspin b2b dj uglyyy</h2>
+            <p><strong>Zeit:</strong> 22:00–00:00</p>
+            <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'schrotflinta': `
+            <h2>Schrotflinta</h2>
+            <p><strong>Zeit:</strong> 18:00–19:00</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'shaxtar': `
+            <h2>Shaxtar</h2>
+            <p><strong>Zeit:</strong> 19:00–20:00</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'serving-cunts': `
+            <h2>Serving Cunts</h2>
+            <p><strong>Zeit:</strong> 20:00–22:00</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'schminkworkshop': `
+            <h2>Schminkworkshop mit Climannax</h2>
+            <p><strong>Zeit:</strong> 14:00–16:00</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'queer-fotostand': `
+            <h2>QueerIn44 Fotostand + Netzwerktreffen</h2>
+            <p><strong>Zeit:</strong> ALL DAY</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'dddr-workshop': `
+            <h2>Dadaistischer Musikworkshop + Performance (DDDR)</h2>
+            <p><strong>Zeit:</strong> 16:00–17:00</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'dj-workshop': `
+            <h2>DJ Workshop</h2>
+            <p><strong>Zeit:</strong> 16:30–17:30</p>
+            <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'rap-lyrik-workshop': `
+            <h2>Rap + Lyrik Workshop für Kinder + Jugendliche</h2>
+            <p><strong>Zeit:</strong> 14:00–15:30</p>
+            <p><strong>Bühne:</strong> Workshops & Chillout @ Maschinerie</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'screamen-workshop': `
+            <h2>Shout out loud – Einführung in das Screamen</h2>
+            <p><strong>Zeit:</strong> 16:00–17:00</p>
+            <p><strong>Bühne:</strong> Workshops & Chillout @ Maschinerie</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'zine-workshop': `
+            <h2>angry grrrl zine workshops</h2>
+            <p><strong>Zeit:</strong> 17:30–18:30</p>
+            <p><strong>Bühne:</strong> Workshops & Chillout @ Maschinerie</p>
+            <p>Beschreibung folgt...</p>
+          `,
+          'fotoarchiv-workshop': `
+            <h2>Feministisches Fotoarchiv & Fotobordado – Workshop</h2>
+            <p><strong>Zeit:</strong> 17:30–18:30</p>
+            <p><strong>Bühne:</strong> Workshops & Chillout @ Maschinerie</p>
+            <p>Beschreibung folgt...</p>
+          `
+        };
+        
+        return content[id] || '<h2>Information</h2><p>Beschreibung folgt...</p>';
+      }
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
       });
     </script>
   </body>
