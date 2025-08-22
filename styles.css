@@ -169,7 +169,7 @@ body {
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
 }
 .section h3 {
-  margin: 22px 0 10px 0;
+  margin: 6px 0 10px 0;
   font-size: 1.15rem;
   color: var(--brown);
 }
@@ -278,7 +278,7 @@ body {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.40));
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 2;
 }
@@ -309,10 +309,7 @@ body {
   filter: saturate(0.9) contrast(1.05) hue-rotate(-6deg);
   transform: scale(1.05);
 }
-.artist-card.duo .artist-img-split img:first-child,
-.artist-card.duo .artist-img-split img:last-child {
-  clip-path: none;
-}
+
 
 /* Image positioning utilities */
 .img-focus-top { object-position: center 15%; }
@@ -565,7 +562,8 @@ body {
 /* Smooth transitions for all artist card elements */
 .artist-img,
 .artist-img-split img,
-.artist-overlay {
+.artist-overlay 
+{
   transition: all 0.5s ease;
 }
 
@@ -617,7 +615,7 @@ body {
   }
   
   .artist-card::after {
-    content: "Mehr Infos";
+    content: "mehr infos";
     position: absolute;
     top: 8px;
     right: 8px;
