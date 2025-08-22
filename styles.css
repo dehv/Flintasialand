@@ -36,7 +36,7 @@ body {
     var(--cream);
   background-size: 100% var(--top-gradient-height), auto;
   background-position: top center, top left;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+  font-family: 'Inria Serif', serif;
   line-height: 1.6;
 }
 
@@ -159,8 +159,9 @@ body {
 .hero-cta { display: inline-flex; gap: 12px; flex-wrap: wrap; }
 
 /* Sections */
-.section { padding: 64px 0; background-color: var(--cream); }
+.section { padding: 30px 0; background-color: var(--cream); }
 .section.alt { background-color: var(--alt-section-bg); }
+.section.first { background-color: var(--lavender); }
 .section h2 {
   font-family: 'P22 Aragon W00 Regular', serif;
   color: var(--brown);
@@ -328,10 +329,20 @@ body {
 }
 .slot {
   background: var(--white);
-  border-left: 6px solid var(--moss);
+  border-left: 6px solid var(--moss); /* Default left border */
   border-radius: 12px;
   padding: 12px 14px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* Artist slots - green left border */
+.slot.artist {
+  border-left: 6px solid var(--moss);
+}
+
+/* Workshop slots - pink left border */
+.slot.workshop {
+  border-left: 6px solid var(--pink-2);
 }
 .slot-time { font-weight: 800; color: var(--moss); margin: 0; line-height: 1; }
 .slot-title { margin: 0; font-weight: 600; line-height: 1; }
@@ -523,11 +534,39 @@ body {
 /* Make artist cards look clickable */
 .artist-card {
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 .artist-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  filter: brightness(1.1) saturate(1.2) contrast(1.05);
+}
+
+/* Hover effect for artist images */
+.artist-card:hover .artist-img,
+.artist-card:hover .artist-img-split img {
+  filter: brightness(1.15) saturate(0.5) contrast(1.1);
+  transform: scale(1.1);
+}
+
+/* Hover effect for artist overlay */
+.artist-card:hover .artist-overlay {
+  background: linear-gradient(
+    135deg, 
+    color-mix(in srgb, var(--pink), transparent 70%) 0%,
+    color-mix(in srgb, var(--lavender), transparent 30%) 50%,
+    color-mix(in srgb, var(--moss), transparent 25%) 100%
+  );
+  opacity: 0.8;
+}
+
+/* Smooth transitions for all artist card elements */
+.artist-img,
+.artist-img-split img,
+.artist-overlay {
+  transition: all 0.5s ease;
 }
 
 /* Make workshop slots look clickable */
@@ -540,10 +579,10 @@ body {
 .slot.clickable:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border-left-color: var(--moss-2);
+  border-left-color: var(--pink); /* Lighter pink on hover */
 }
 .slot.clickable::after {
-  content: "Mehr Infos";
+  content: "mehr infos";
   position: absolute;
   bottom: 8px;
   left: 12px;
@@ -570,7 +609,7 @@ body {
   }
   
   .slot.clickable::after {
-    content: "Mehr Infos";
+    content: "ehr Infos";
     font-size: 11px;
     padding: 6px 10px;
     bottom: 6px;
