@@ -62,7 +62,7 @@ body {
   padding: 12px 0;
 }
 .logo {
-  font-family: 'Caprasimo', serif;
+  font-family: 'P22 Aragon W00 Regular', serif;
   font-size: 1.6rem;
   color: var(--brown);
   text-decoration: none;
@@ -145,7 +145,7 @@ body {
   filter: brightness(0) saturate(100%) invert(15%) sepia(99%) saturate(1065%) hue-rotate(357deg) brightness(98%) contrast(88%);
 }
 .hero-title {
-  font-family: 'Caprasimo', serif;
+  font-family: 'P22 Aragon W00 Regular', serif;
   font-size: clamp(2.6rem, 6vw, 5rem);
   color: var(--brown);
   margin: 0 0 8px 0;
@@ -162,7 +162,7 @@ body {
 .section { padding: 64px 0; background-color: var(--cream); }
 .section.alt { background-color: var(--alt-section-bg); }
 .section h2 {
-  font-family: 'Caprasimo', serif;
+  font-family: 'P22 Aragon W00 Regular', serif;
   color: var(--brown);
   margin: 0 0 16px 0;
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
@@ -395,7 +395,7 @@ body {
   border-radius: 16px;
   padding: 16px;
 }
-.tier h3 { margin: 0 0 6px 0; font-family: 'Caprasimo', serif; color: var(--brown); }
+.tier h3 { margin: 0 0 6px 0; font-family: 'P22 Aragon W00 Regular', serif; color: var(--brown); }
 
 .tickets-art {
   border-radius: 20px;
@@ -420,7 +420,7 @@ body {
   padding: 28px 0;
   flex-wrap: wrap;
 }
-.brand { font-family: 'Caprasimo', serif; margin: 0 0 6px 0; }
+.brand { font-family: 'P22 Aragon W00 Regular', serif; margin: 0 0 6px 0; }
 .brand a { text-decoration: none; }
 .brand img {
   height: 32px;
