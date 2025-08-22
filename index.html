@@ -432,10 +432,8 @@
       // Debug feature: 10 clicks on hero logo
       document.getElementById('hero-logo').addEventListener('click', () => {
         debugClickCount++;
-        console.log(`Debug clicks: ${debugClickCount}/10`);
         
         if (debugClickCount >= 10) {
-          console.log('Debug mode activated - showing lineup');
           showLineup();
         }
       });
