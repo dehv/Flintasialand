@@ -41,7 +41,7 @@
       <section class="hero" aria-label="Intro">
         <div class="bg-ornaments" aria-hidden="true"></div>
         <div class="container hero-inner">
-          <div class="hero-logo">
+          <div class="hero-logo" id="hero-logo">
             <img src="media/logo.png" alt="flintasialand" />
           </div>
           <p class="hero-kicker">festival für sichtbarkeit und empowerment von flinta*-künstler*innen</p>
@@ -84,12 +84,40 @@
               <p>hands-on sessions zu sound, body, zines, technik und empowerment.</p>
             </div>
             <div class="feature-card">
-              <h3>konzerte</h3>
+              <h3>live acts & dj sets</h3>
               <p>newcomer und bekannte acts auf zwei bühnen – tagsüber mellow, nachts wild.</p>
             </div>
             <div class="feature-card">
               <h3>community</h3>
               <p>sichere, barrierearme räume mit awareness-team und care-strukturen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown Section -->
+      <section id="countdown" class="section alt countdown-section" style="display: none;">
+        <div class="container">
+          <h2>Line-up wird bald enthüllt!</h2>
+          <div class="countdown-display">
+            <p>Die Acts werden eine Woche vor dem Festival bekannt gegeben:</p>
+            <div class="countdown-timer">
+              <div class="countdown-item">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Tage</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="hours">0</span>
+                <span class="countdown-label">Stunden</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="minutes">0</span>
+                <span class="countdown-label">Minuten</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="seconds">0</span>
+                <span class="countdown-label">Sekunden</span>
+              </div>
             </div>
           </div>
         </div>
@@ -333,6 +361,94 @@
     </div>
 
     <script>
+      // Festival date: September 6, 2025
+      const FESTIVAL_DATE = new Date('2025-09-06T14:00:00');
+      const REVEAL_DATE = new Date(FESTIVAL_DATE.getTime() - (7 * 24 * 60 * 60 * 1000)); // One week before
+      
+      let debugClickCount = 0;
+      let countdownInterval;
+      
+      // Check if lineup should be visible
+      function shouldShowLineup() {
+        const now = new Date();
+        return now >= REVEAL_DATE || debugClickCount >= 10;
+      }
+      
+      // Update countdown display
+      function updateCountdown() {
+        const now = new Date();
+        const timeLeft = REVEAL_DATE.getTime() - now.getTime();
+        
+        if (timeLeft <= 0) {
+          showLineup();
+          return;
+        }
+        
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+      }
+      
+      // Show lineup and hide countdown
+      function showLineup() {
+        document.getElementById('countdown').style.display = 'none';
+        document.getElementById('lineup').style.display = 'block';
+        document.getElementById('programm').style.display = 'block';
+        
+        // Update navigation links
+        const lineupLink = document.querySelector('a[href="#lineup"]');
+        const programmLink = document.querySelector('a[href="#programm"]');
+        if (lineupLink) lineupLink.style.display = 'inline';
+        if (programmLink) programmLink.style.display = 'inline';
+        
+        if (countdownInterval) {
+          clearInterval(countdownInterval);
+        }
+      }
+      
+      // Hide lineup and show countdown
+      function hideLineup() {
+        document.getElementById('countdown').style.display = 'block';
+        document.getElementById('lineup').style.display = 'none';
+        document.getElementById('programm').style.display = 'none';
+        
+        // Hide navigation links
+        const lineupLink = document.querySelector('a[href="#lineup"]');
+        const programmLink = document.querySelector('a[href="#programm"]');
+        if (lineupLink) lineupLink.style.display = 'none';
+        if (programmLink) programmLink.style.display = 'none';
+        
+        // Start countdown
+        updateCountdown();
+        countdownInterval = setInterval(updateCountdown, 1000);
+      }
+      
+      // Debug feature: 10 clicks on hero logo
+      document.getElementById('hero-logo').addEventListener('click', () => {
+        debugClickCount++;
+        console.log(`Debug clicks: ${debugClickCount}/10`);
+        
+        if (debugClickCount >= 10) {
+          console.log('Debug mode activated - showing lineup');
+          showLineup();
+        }
+      });
+      
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        if (shouldShowLineup()) {
+          showLineup();
+        } else {
+          hideLineup();
+        }
+      });
+
       // Navigation toggle functionality
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.site-nav');
