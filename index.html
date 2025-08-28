@@ -196,20 +196,20 @@
           
           <h3>große bühne @ speicher100</h3>
           <div class="schedule">
+            <div class="slot clickable artist" onclick="openModal('catpisspotion')">
+              <p class="slot-time">15:45–16:15</p>
+              <p class="slot-title">cat piss potion</p>
+            </div>
             <div class="slot clickable artist" onclick="openModal('yumi-k')">
-              <p class="slot-time">14:00–15:00</p>
+              <p class="slot-time">16:45–17:30</p>
               <p class="slot-title">yumi k</p>
             </div>
             <div class="slot clickable artist" onclick="openModal('katanna-isi')">
-              <p class="slot-time">15:30–16:30</p>
+              <p class="slot-time">18:00–18:30</p>
               <p class="slot-title">katanna + isi (patina records)</p>
             </div>
-            <div class="slot clickable artist" onclick="openModal('catpisspotion')">
-              <p class="slot-time">17:00–18:00</p>
-              <p class="slot-title">cat piss potion</p>
-            </div>
             <div class="slot clickable artist" onclick="openModal('morra')">
-              <p class="slot-time">18:30–19:30</p>
+              <p class="slot-time">19:00–19:30</p>
               <p class="slot-title">morra</p>
             </div>
             <div class="slot clickable artist" onclick="openModal('leona')">
@@ -239,7 +239,7 @@
             </div>
             <div class="slot clickable workshop" onclick="openModal('dddr-workshop')">
               <div class="slot-head">
-                <p class="slot-time">16:00–17:00</p>
+                <p class="slot-time">16:00–17:30</p>
                 <span class="badge badge-flinta">flinta* only</span>
               </div>
               <p class="slot-title">dadaistischer musikworkshop + performance (dddr)</p>
@@ -479,13 +479,13 @@
         const content = {
           'yumi-k': `
             <h2>Yumi K</h2>
-            <p><strong>Zeit:</strong> 14:00–15:00</p>
+            <p><strong>Zeit:</strong> 16:45–17:30</p>
             <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
             <p>Yumi K ist eine 26-jährige südkoreanisch-deutsche Singer-Songwriterin und Produzentin aus Wuppertal (NRW). Mit ihrem eigenständigen Sound bewegt sie sich bewusst abseits des Mainstreams und verbindet persönliche Texte mit atmosphärischen Produktionen. Nach ihrer letzten Single „Shake It" war sie zudem als Feature auf „KK" zu hören – einer Zusammenarbeit mit dem Berliner Songwriter Lamcy und Produzent Tatamimuse.</p>
           `,
           'katanna-isi': `
             <h2>Katanna + Isi (Patina Records)</h2>
-            <p><strong>Zeit:</strong> 15:30–16:30</p>
+            <p><strong>Zeit:</strong> 18:00–18:30</p>
             <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
             <p>Katanna kann Karate - aber auch so viel mehr. Mit frechen flows und lauten Beats bricht „Dortmunds Herbste Maus" durch die Monotonie der Szene wie eine Naturgewalt. Glanz, Glitzer und booming 808s in einem verbunden, macht Katanna einen Sound, der kompromisslos ist. Von TikTok Trends bis Telfar Bags repräsentiert sie die Internet-Culture der Gen Z genau so gut wie ihre Wurzeln in der Hochhaussiedlung. Katanna for the girls, Katanna for everyone</p>
             <p>Isi ist eine deutsche Rapperin, die sich in ihren Texten auf ihre Erfahrungen mit der Polizei und der Gesellschaft bezieht. Ihr Sound ist eine Mischung aus Hip-Hop, Rap und R&B. Sie hat bereits mehrere Alben veröffentlicht und ist eine der bekanntesten Rapperinnen in Deutschland.</p>
@@ -493,14 +493,14 @@
           `,
           'catpisspotion': `
             <h2>catpisspotion</h2>
-            <p><strong>Zeit:</strong> 17:00–18:00</p>
+            <p><strong>Zeit:</strong> 15:45–16:15</p>
             <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
             <p>Cat Piss Potion - klingt komisch, klingen aber gut! Die Dortmunder:innen machen eine markante Mischung aus Riot Grrrl Punk und 90s Grunge. Die Texte schwanken zwischen feministischer Wut und emotionalem Breakdown. Apropos Breakdown - im Oktober 2024 erschien auch ihr Debütalbum "Millennial Breakdown". Der Soundtrack für junge und junggebliebene Emo Kids - zum Tanzen, Mitsingen und Fühlen.</p>
             <p><em>Foto: luisagalotti</em></p>
           `,
           'morra': `
             <h2>Morra</h2>
-            <p><strong>Zeit:</strong> 18:30–19:30</p>
+            <p><strong>Zeit:</strong> 19:00–19:30</p>
             <p><strong>Bühne:</strong> Große Bühne @ Speicher100</p>
             <p>MORRA (HC-Punk aus drei Bundesländern) - vier Freund*innen, die sich 2020 in der Düsterheit der Pandemie gefunden haben, um gemeinsam im Proberaum laut zu sein. Mittlerweile verteilt auf diverse Städte, mit viel Freude daran auf Bühne laut zu sein. Wie Fö (Bierschinken) es nennt: „So in Sachen Bühnenpräsenz und Intensität ist das schon echt ne Bank geworden! Lediglich Nuray (Vocals) hat keine Bühnenpräsenz, eher eine Vor-der-Bühne-Rumtigern-Präsenz."</p>
           `,
@@ -556,7 +556,7 @@
           'dddr-workshop': `
             <h2>Dadaistischer Musikworkshop + Performance (DDDR)</h2>
             <img src="media/workshops/dddr-workshop.jpg" alt="DDDR Workshop" class="modal-img" loading="lazy" />
-            <p><strong>Zeit:</strong> 16:00–17:00</p>
+            <p><strong>Zeit:</strong> 16:00–17:30</p>
             <p><strong>Bühne:</strong> Kleine Bühne @ Kieselwiese</p>
             <p>die dachdeckende randgruppe gibt eine niedrigschwellige einführung in die welt der verrückten life musik. der workshop bietet die möglichkeit ohne leistungsdruck verschiedene, mal mehr mal weniger, elektronische instrumente auszuprobieren, miteinander zu jammen und mit effekten herumzuspielen.</p>
             <p>für die teilnahme am workshop ist keine vorerfahrung nötig! es wird ein besonders anfänger*innenfreundlicher raum geschaffen frei von noten, tonart, richtig, oder falsch.</p>
