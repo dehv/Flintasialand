@@ -382,6 +382,11 @@ body {
   color: var(--brown);
   border: 2px solid color-mix(in srgb, var(--brown), transparent 70%);
 }
+.badge-kids {
+  background: color-mix(in srgb, var(--moss), white 40%);
+  color: var(--brown);
+  border: 2px solid color-mix(in srgb, var(--brown), transparent 70%);
+}
 
 /* Tickets */
 .tickets {
